@@ -40,6 +40,7 @@ body {
     position: fixed;
     top: 0;
     width: 144rem;
+    z-index: 2;
 }
 
 .wrapper_header {
@@ -74,19 +75,10 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
 }
 
 .header__link:hover, .header__link:focus, .header__link:active {
-    color: rgb(255, 255, 11);
+    color: #093d46;
 }
 
-
-.button__primary {
-    color: #fff;
-    background: #0D606F;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
-    border: transparent;
-}
-
-
-.header__button {
+.login__button {
     width: 10.3rem;
     height: 4.1rem;
     border-radius: 1rem;
@@ -95,8 +87,15 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     font-weight: 500;
     font-size: 1.6rem;
     color: #FFFFFF;
+    color: #fff;
+    background: #0D606F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border: transparent;
 }
 
+.login__button:hover, .login__button:focus, .login__button:active {
+    background: #093d46;
+}
 
 
 /* header styles end*/
@@ -195,6 +194,11 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     font-weight: 400;
     font-size: 24px;
     color: #F2785C;
+}
+
+.search-form__field:focus, .search-form__field:active{
+    outline:none;
+    background: rgba(255, 255, 255, 0.815);
 }
 
 
