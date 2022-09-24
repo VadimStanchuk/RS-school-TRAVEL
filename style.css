@@ -17,7 +17,6 @@ body {
     font-weight: normal;
     color:#0D606F ;
     /*базовые стили для бади, чтобы в дальнейшем если что-то добавилось оно унаследовало бы этот стиль*/
-    
 }
 
 
@@ -207,7 +206,6 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     margin: 0 auto;
     margin-top: 8rem;
     margin-bottom: 9.7rem;
-
 }
 
 .steps__title {
@@ -230,13 +228,11 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     height: 15.4rem;
     text-align:center;
     margin-right: 75px;
-    
 }
 .steps__card2 {
     width: 22.2rem;
     height: 15.4rem;
     text-align:center;
-    
 }
 .steps__card3{
     width: 31.7rem;
@@ -266,7 +262,7 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     max-width: 252rem;
     margin: 0 auto;
     margin-bottom: 80px;
-    
+    overflow: hidden;
 }
 
 .steps__title {
@@ -288,7 +284,6 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     border-radius: 16px;
     margin-right: 60px;
     border-radius: 16px;
-    
 }
 
 .last-slide {
@@ -350,13 +345,15 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     border: transparent;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
-    
+}
+
+.see-more__button:hover, .see-more__button:focus, see-more__button:active{
+    background: #093d46;
 }
 
 .see-more {
     display: inline-block;
     padding-left: 48px;
-    
     font-family: 'Red Hat Text', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -369,6 +366,149 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
 }
 
 
-
-
 /* destinations styles end*/
+
+/* Travel Stories styles start*/
+
+.steps__title-travel {
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 40px;
+    color: #F2785C;
+    white-space: nowrap;
+    text-align:center;
+}
+
+
+.stories__container-1 {
+    display: flex;
+    margin-bottom: 3rem;
+    margin-top: 12rem;
+    padding-top: 4rem;
+}
+
+.country__stories-img {
+    width: 400px;
+    height: 250px;
+    filter: drop-shadow(0px 4px 4px #0D606F);
+    border-radius: 16px;
+    margin-right: 4rem;
+
+}
+.wrapper__stories{
+    width: 120rem;
+    margin: 0 auto;
+
+}
+
+.stories-title {
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    color: #0D606F;
+    margin-top: 0;
+    margin-bottom: 2.4rem;
+
+}
+
+.text__country__stories {
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+    margin: 0;
+}
+
+.stories__read-more {
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+}
+
+.stories__container{
+    display: flex;
+    margin-bottom: 3rem;
+    margin-top: 0;
+}
+
+.stories__container-last{
+    display: flex;
+    margin-bottom: 4rem;
+    margin-top: 0;
+}
+
+.travel_stories {
+    margin-bottom: 0;
+}
+
+.see-more {
+    display: inline-block;
+    padding-left: 48px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: url(./images/arrow.svg) no-repeat left center;
+    background-size: 35px 22.5px;
+    margin: 0;
+}
+
+/* Travel Stories styles end*/
+
+/* Footer styles start*/
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.1rem;
+    width: 144rem;
+    margin-top: 0rem;
+}
+
+.footer__items {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+    margin-left: 47.1rem;
+}
+
+.footer__information {
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.media {
+    display: flex;
+    justify-content: space-between;
+    width: 14.1rem;
+    align-items: center;
+}
+
+.travel-stories-footer__background {
+    background: url(./images/background/backgound__futter.png)center;
+    width: 144rem;
+    margin-top: -8rem ;
+}
+
+.travel-stories__background {
+    background: rgba(255, 255, 255, 0.7);
+    padding-bottom: 4.1rem;
+}
+
+/* Footer styles end*/
