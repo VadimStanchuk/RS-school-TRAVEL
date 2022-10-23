@@ -8,14 +8,10 @@ html {
 }
 
 body {
+    max-width: 1440px;
+    overflow: hidden;
     margin: 0 auto;
-    width: 144rem;
     font-family: 'Red Hat Text', sans-serif;
-    font-style: normal;
-    font-size: 1.6rem;
-    line-height: 1.2;
-    font-weight: normal;
-    color:#0D606F ;
     /*базовые стили для бади, чтобы в дальнейшем если что-то добавилось оно унаследовало бы этот стиль*/
 }
 
@@ -25,42 +21,41 @@ body {
 
 .background-header-intro {
     background: url(./images/background/garrett-parker-DlkF4-dbCOU-unsplash\ 1.png) no-repeat center;
-    height: 76.5rem;
-    width: 144rem;
+    height: 765px;
+    width: 1440px;
 }
 
 .header {
-    background: rgba(242, 120, 92, 0.7);
-    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
-    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 9rem;
     position: fixed;
     top: 0;
-    width: 144rem;
+    width: 1440px;
+    height: 90px;
     z-index: 2;
+    background: rgba(242, 120, 92, 0.7);
+    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
 .wrapper_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 120rem;
+    width: 1200px;
+}
+
+.header__logo {
+    margin-bottom: 3px;
 }
 
 .header__navigation{
-margin-left: -3.4rem; /**подогнал попиксельно**/
+margin-left: -7%; /**подогнал попиксельно**/
 }
 
 .header__list {
     display: flex;
+    gap: 42px;
     flex-wrap: wrap;
-    width: 52.7rem;
-    height: 2.1rem;
-    justify-content: space-between;
-    padding-inline-start: 0;
     list-style-type: none;
 }
 
@@ -78,23 +73,25 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     color: #093d46;
 }
 
+.login__button:hover, .login__button:focus, .login__button:active {
+    background: #093d46;
+}
+
 .login__button {
-    width: 10.3rem;
-    height: 4.1rem;
-    border-radius: 1rem;
+    width: 103px;
+    height: 41px;
+    border-radius: 10px;
     font-family: 'Red Hat Text';
     font-style: normal;
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 16px;
     color: #FFFFFF;
     background: #0D606F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border: transparent;
 }
 
-.login__button:hover, .login__button:focus, .login__button:active {
-    background: #093d46;
-}
+
 
 
 /* header styles end*/
@@ -103,31 +100,24 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
 
 
 .intro {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-family: 'Aleo', serif;
     color: #FFFFFF;
-    position: relative;
-    padding-top: 12.2rem;
+    padding-top: 122px;
 }
 
 .wrapper__intro{
-    width: 120rem;
-    height: 42.2rem;
     margin: 0 auto;
-
+    width: 1200px;
 }
 
 .intro__title{
-    max-width: 89.2rem;
+    max-width: 892px;
     margin-block-start: 0;
     margin-block-end: 0;
     font-family: 'Aleo', serif;
     font-style: normal;
     font-weight: 700;
     font-size: 80px;
-    margin-bottom: 3rem;
+    margin-bottom: 30px;
 }
 
 .intro__subtitle{
@@ -135,20 +125,18 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     font-style: italic;
     font-weight: 700;
     font-size: 20px;
-    margin-bottom: 4.6rem;
+    margin-bottom: 46px;
 }
 
 .start-planning__button {
     position: relative;
     left: 646px;
-    margin-top: 18px;
-    margin-bottom: 18px;
-    padding: 13.5px 32px;
+    margin: 18px 0;
+    padding: 13px 32px;
     font-family: 'Red Hat Text', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    line-height: 32px;
     color: #FFFFFF;
     background: #0D606F;
     border: transparent;
@@ -200,12 +188,11 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
 /* steps styles start*/
 
 .steps {
-    width: 117.7rem;
-    height: 24.7rem;
+    width: 1177px;
     background-color: #FFFFFF;
     margin: 0 auto;
-    margin-top: 8rem;
-    margin-bottom: 9.7rem;
+    margin-top: 5.5%;
+    margin-bottom: 6.7%;
 }
 
 .steps__title {
@@ -215,29 +202,24 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     color: #F2785C;
     white-space: nowrap;
     text-align:center;
-    margin-bottom: 4.5rem;
+    margin-bottom: 3.3%;
 }
 
 .steps__cards{
     display: flex;
     justify-content: space-between;
+    text-align:center;
 }
 
 .steps__card1{
-    width: 24.7rem;
-    height: 15.4rem;
-    text-align:center;
-    margin-right: 75px;
+    width: 21%;
+    margin-right: 4.9%;
 }
 .steps__card2 {
-    width: 22.2rem;
-    height: 15.4rem;
-    text-align:center;
+    width: 18.5%;
 }
 .steps__card3{
-    width: 31.7rem;
-    height: 15.4rem;
-    text-align:center;
+    width: 26.4%;
 }
 
 
@@ -245,12 +227,11 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     margin: 0;
     font-weight: 400;
     font-size: 20px;
-    line-height: 24px;
     color: #0D606F;
     font-family: 'Aleo', serif;
     font-style: normal;
     white-space: nowrap;
-    margin-top: 2.5rem;
+    margin-top: 30px;
 }
 
 
@@ -259,22 +240,18 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
 /* destinations styles start*/
 
 .destinations__wrapper-full {
-    max-width: 252rem;
-    margin: 0 auto;
-    margin-bottom: 80px;
-    overflow: hidden;
+    max-width: 2520px;
+    margin: 0 auto 80px;
 }
 
-.steps__title {
-    margin-bottom: 50px;
-}
 
 .sliders {
-    max-width: 252rem;
     display: flex;
+    gap: 60px;
     justify-content: center;
     position: relative;
-    margin-bottom: 24px;
+    max-width: 1440px;
+    margin-bottom: 20px;
 }
 
 
@@ -282,34 +259,26 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     width: 800px;
     height: 800px;
     border-radius: 16px;
-    margin-right: 60px;
-    border-radius: 16px;
 }
 
-.last-slide {
-    width: 800px;
-    height: 800px;
-    border-radius: 16px;
-    margin-right: 0;
-    border-radius: 16px;
-    
-}
 
 .countries__names {
+    position: absolute;
+    transform: translateY(-85px);
+    margin: 0 15px;
     font-family: 'Red Hat Text', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
     line-height: 42px;
     color: #FFFFFF;
-    position: absolute;
-    transform: translateY(-85px);
-    margin: 0 15px;
 }
 
 .dots-wrapper{
-    text-align:center;
-    margin-bottom: 35px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
 .dot {
@@ -317,19 +286,8 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     height: 20px;
     background: rgba(242, 120, 92, 0.5);
     border-radius: 50%;
-    display: inline-block;
-    margin: 0 auto;
-    margin-right: 10px;
 }
-.dot:last-child {
-    width: 20px;
-    height: 20px;
-    background: rgba(242, 120, 92, 0.5);
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 auto;
-    margin-right: 0;
-}
+
 
 .dot:focus, .dot:active {
     background: #F2785C;
@@ -351,40 +309,46 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     background: #093d46;
 }
 
-.see-more {
-    display: inline-block;
-    padding-left: 48px;
-    font-family: 'Red Hat Text', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    color: #FFFFFF;
-    text-decoration: none;
-    background: url(./images/arrow.svg) no-repeat left center;
-    background-size: 35px 22.5px;
-    margin: 0;
-}
-
 
 /* destinations styles end*/
 
 /* Travel Stories styles start*/
 
-.steps__title-travel {
+
+.travel_stories {
     margin: 0 auto;
+}
+
+.wrapper__stories{
+    width: 83.3%;
+    margin: 0 auto ;
+}
+
+.steps__title-travel {
+    text-align:center;
     font-weight: 500;
     font-size: 40px;
     color: #F2785C;
-    white-space: nowrap;
-    text-align:center;
+    margin-bottom: 40PX;
 }
 
 
 .stories__container-1 {
     display: flex;
-    margin-bottom: 3rem;
-    margin-top: 12rem;
-    padding-top: 4rem;
+    margin-bottom: 30px;
+    padding-top: 40px;
+}
+
+.stories__container{
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+.stories__container-last{
+    display: flex;
+    margin-bottom: 40px;
+    margin-top: 0;
 }
 
 .country__stories-img {
@@ -392,14 +356,10 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     height: 250px;
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
-    margin-right: 4rem;
+    margin-right: 40px;
 
 }
-.wrapper__stories{
-    width: 120rem;
-    margin: 0 auto;
 
-}
 
 .stories-title {
     font-family: 'Aleo', serif;
@@ -409,7 +369,7 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     line-height: 42px;
     color: #0D606F;
     margin-top: 0;
-    margin-bottom: 2.4rem;
+    margin-bottom: 24px;
 
 }
 
@@ -432,21 +392,9 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     color: #0D606F;
 }
 
-.stories__container{
-    display: flex;
-    margin-bottom: 3rem;
-    margin-top: 0;
-}
 
-.stories__container-last{
-    display: flex;
-    margin-bottom: 4rem;
-    margin-top: 0;
-}
 
-.travel_stories {
-    margin-bottom: 0;
-}
+
 
 .see-more {
     display: inline-block;
@@ -458,7 +406,7 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     color: #FFFFFF;
     text-decoration: none;
     background: url(./images/arrow.svg) no-repeat left center;
-    background-size: 35px 22.5px;
+    background-size: 35px 22px;
     margin: 0;
 }
 
@@ -471,17 +419,15 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 6.1rem;
+    height: 61px;
     width: 144rem;
-    margin-top: 0rem;
+    margin-top: 0;
 }
 
 .footer__items {
     display: flex;
     justify-content: space-between;
-    padding-top: 1.4rem;
-    padding-bottom: 1.4rem;
-    margin-left: 47.1rem;
+    margin-left: 39.25%;
 }
 
 .footer__information {
@@ -496,19 +442,19 @@ margin-left: -3.4rem; /**подогнал попиксельно**/
 .media {
     display: flex;
     justify-content: space-between;
-    width: 14.1rem;
+    width: 141px;
     align-items: center;
 }
 
 .travel-stories-footer__background {
     background: url(./images/background/backgound__futter.png)center;
-    width: 144rem;
-    margin-top: -8rem ;
+    width: 1440px;
+    
 }
 
 .travel-stories__background {
     background: rgba(255, 255, 255, 0.7);
-    padding-bottom: 4.1rem;
+    padding-bottom: 41px;
 }
 
 /* Footer styles end*/
