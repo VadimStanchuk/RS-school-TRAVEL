@@ -3,53 +3,87 @@ html {
     box-sizing: border-box;
     overflow-x: hidden;
 }
-*, *::before, *::after{
-    box-sizing: inherit; /*псевдоэлементы наследуют от родителя - html*/
-}
-
 body {
     max-width: 1440px;
     overflow: hidden;
     margin: 0 auto;
     font-family: 'Red Hat Text', sans-serif;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+
     /*базовые стили для бади, чтобы в дальнейшем если что-то добавилось оно унаследовало бы этот стиль*/
 }
+*::before, 
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
 
 
 /* header styles start*/
 
+/*пока что их не использую*/
 
-.background-header-intro {
-    background: url(./images/background/garrett-parker-DlkF4-dbCOU-unsplash\ 1.png) no-repeat center;
-    height: 765px;
-    width: 1440px;
+._container {
+    max-width: 1200px;
+    margin: 0px auto;
+    box-sizing: content-box;
+    padding: 0 15px;
 }
+/*пока что их не использую*/
+
 
 .header {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    width: 1440px;
-    height: 90px;
-    z-index: 2;
+    width: 100%;
+    left: 0;
+    top: 0%;
+    z-index: 50;
+    min-height: 90px;
     background: rgba(242, 120, 92, 0.7);
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
-.wrapper_header {
+.header__container {
     display: flex;
-    justify-content: space-between;
+    min-height: 90px;
     align-items: center;
-    width: 1200px;
+    justify-content: space-between;
 }
 
 .header__logo {
-    margin-bottom: 3px;
+    margin: 0 -45px 6px 0;
 }
-
-.header__navigation{
-margin-left: -7%; /**подогнал попиксельно**/
+.header__navigation {
+    padding: 0 0 0 5px;
+}
+.background-header-intro {
+    background: url(./images/background/garrett-parker-DlkF4-dbCOU-unsplash\ 1.png) no-repeat center;
+    height: 765px;
+    max-width: 1440px;
 }
 
 .header__list {
@@ -57,13 +91,10 @@ margin-left: -7%; /**подогнал попиксельно**/
     gap: 42px;
     flex-wrap: wrap;
     list-style-type: none;
+    padding-inline-start: 0px;
 }
 
 .header__link{
-    font-family: 'Red Hat Text';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
     line-height: 21px;
     color: #FFFFFF;
     text-decoration: none;
@@ -81,15 +112,12 @@ margin-left: -7%; /**подогнал попиксельно**/
     width: 103px;
     height: 41px;
     border-radius: 10px;
-    font-family: 'Red Hat Text';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
     color: #FFFFFF;
     background: #0D606F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border: transparent;
 }
+
 
 
 
@@ -101,12 +129,13 @@ margin-left: -7%; /**подогнал попиксельно**/
 
 .intro {
     color: #FFFFFF;
-    padding-top: 122px;
+    padding-top: 32px;
+    max-width: 1440px;
 }
 
 .wrapper__intro{
     margin: 0 auto;
-    width: 1200px;
+    max-width: 1200px;
 }
 
 .intro__title{
@@ -128,40 +157,56 @@ margin-left: -7%; /**подогнал попиксельно**/
     margin-bottom: 46px;
 }
 
-.start-planning__button {
+
+.search-box {
     position: relative;
-    left: 646px;
-    margin: 18px 0;
-    padding: 13px 32px;
-    font-family: 'Red Hat Text', sans-serif;
-    font-style: normal;
-    font-weight: 500;
+    background: rgba(255, 255, 255, 0.7);
+    width: 856px;
+    height: 59px;
+    border-radius: 16px;
+    margin: 0;
+    padding: 18px;
+}
+
+.search-txt{
+    float: left;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 14px 0px 23px 23px;
+    font-family: 'Aleo', serif;
+    font-style: italic;
+    font-weight: 400;
     font-size: 24px;
-    color: #FFFFFF;
+    color: #F2785C;
+}
+
+.start-planning__button {
+    float: right;
+    padding: 13px 32px;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 32px;
     background: #0D606F;
+    display: flex;
     border: transparent;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
 }
 
+.start-planning__button-text {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
 .start-planning__button:hover, .start-planning__button:focus, start-planning__button:active{
     background: #093d46;
 }
-
-.search-form__wrap{
-    margin: 0;
-    padding: 0;
+.search-box:hover {
+    background: rgba(255, 255, 255, 0.8);
 }
 
-.search-form__field{
-    width: 892px;
-    height: 95px;
-    padding:0;
-    border-radius: 16px;
-    border: none;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.7);
-    padding-left: 41px;
+.search-box::placeholder{
     font-family: 'Aleo', serif;
     font-style: italic;
     font-weight: 400;
@@ -169,18 +214,7 @@ margin-left: -7%; /**подогнал попиксельно**/
     color: #F2785C;
 }
 
-.search-form__field::placeholder{
-    font-family: 'Aleo', serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 24px;
-    color: #F2785C;
-}
 
-.search-form__field:focus, .search-form__field:active {
-    outline:none;
-    background: rgba(255, 255, 255, 0.815);
-}
 
 
 /* intro styles end*/
