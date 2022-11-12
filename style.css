@@ -271,11 +271,8 @@ p {
     padding-right: 32px;
 }
 
-.start-planning__button:hover, a.start-planning__button  {
-    opacity: 0.8;
-    background: #093d46;
-    color: #FFFFFF;
-}
+
+
 
 .search-box:hover {
     background: rgba(255, 255, 255, 0.8);
@@ -325,9 +322,8 @@ p {
     font-weight: 500;
     font-size: 40px;
     color: #F2785C;
-    
     text-align:center;
-    margin: 0 0 40px 0;
+    margin: 0 0 43px 0;
 }
 
 .steps__cards{
@@ -444,19 +440,12 @@ p {
     outline:none;
 }
 
-.see-more__button {
-    display: block;
-    width: 228px;
+.find-more-button {
+    display: flex;
     margin: 0 auto;
-    padding: 13.5px 32px;
-    background: #0D606F;
-    border: transparent;
-    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border: none;
+    padding: 0;
     border-radius: 10px;
-}
-
-.see-more__button:hover, .see-more__button:focus, see-more__button:active{
-    background: #093d46;
 }
 
 
@@ -465,11 +454,11 @@ p {
 /* Travel Stories styles start*/
 
 
-.travel_stories {
+.travel-stories-highlight {
     margin: 0 0 42px 0;
 }
 
-.travel-stories-txt {
+.travel-stories-highlight h2 {
     text-align:center;
     font-weight: 500;
     font-size: 40px;
@@ -477,33 +466,33 @@ p {
     margin: 0;
 }
 
-.stories__container-first {
+
+.stories-container-first {
     display: flex;
-    max-width: 1200px;
     margin-bottom: 30px;
     padding-top: 40px;
 }
 
-.stories__container{
+.stories-container{
     display: flex;
     margin-bottom: 30px;
     margin-top: 0;
 }
 
-.stories__container-last{
+.stories-container-last{
     display: flex;
     margin-bottom: 40px;
     margin-top: 0;
 }
 
-.country__stories {
+.country-stories {
     display: flex;
     flex-direction: column;
 }
 
 .country__stories-img {
-    width: 400px;
-    height: 250px;
+    max-width: 400px;
+    max-height: 250px;
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
     margin-right: 40px;
@@ -515,13 +504,16 @@ p {
     }
 }
 
-.stories-title {
+.travel-stories-content {
     font-family: 'Aleo', serif;
     font-style: normal;
     font-weight: 400;
+    color: #0D606F;
+}
+
+.stories-title {
     font-size: 35px;
     line-height: 42px;
-    color: #0D606F;
     margin: 0;
     margin-bottom: 24px;
     display: flex;
@@ -535,75 +527,59 @@ p {
     }
 }
 
-
-
-
-
-
-.text__country__stories {
-    
-    font-family: 'Aleo', serif;
-    font-style: normal;
-    font-weight: 400;
+.text-country-stories {
     font-size: 20px;
     line-height: 24px;
-    color: #0D606F;
     margin: 0;
 }
 
-.stories__read-more {
-    font-family: 'Aleo', serif;
-    font-style: normal;
+.stories-read-more {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
+    text-decoration-line: underline;
 }
 
-.see-more {
-    display: inline-block;
-    padding-left: 48px;
-    font-family: 'Red Hat Text', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    color: #FFFFFF;
-    text-decoration: none;
-    background: url(./images/arrow.svg) no-repeat left center;
-    background-size: 35px 22px;
-    margin: 0;
+.see-more-button {
+    display: flex;
+    margin: 0 auto;
+    border: none;
+    padding: 0;
+    border-radius: 10px;    
 }
 
 /* Travel Stories styles end*/
 
 /* Footer styles start*/
 
+
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: end;
+    padding: 13.35px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.footer__items {
-    display: flex;
-    gap: 300px;
+.footer-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
-.footer__information {
+.footer-information {
     display: flex;
     align-items: center;
-    font-family: 'Red Hat Text', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
+    justify-content: center;
     color: #FFFFFF;
+}
+
+.media-container {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .media {
     display: flex;
     gap: 20px;
-    align-items: center;
 }
 
 .travel-stories-footer__background {
