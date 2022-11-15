@@ -3,93 +3,236 @@ html {
     box-sizing: border-box;
     overflow-x: hidden;
 }
-*, *::before, *::after{
-    box-sizing: inherit; /*псевдоэлементы наследуют от родителя - html*/
-}
-
 body {
     max-width: 1440px;
     overflow: hidden;
     margin: 0 auto;
     font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+
     /*базовые стили для бади, чтобы в дальнейшем если что-то добавилось оно унаследовало бы этот стиль*/
 }
+*::before, 
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box; 
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
 
+p {
+    margin: 0;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
 
 /* header styles start*/
 
+.wrapper {
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+}
 
-.background-header-intro {
-    background: url(./images/background/garrett-parker-DlkF4-dbCOU-unsplash\ 1.png) no-repeat center;
-    height: 765px;
-    width: 1440px;
+._container {
+    max-width: 1200px;
+    margin: 0px auto;
+    box-sizing: content-box;
+    padding: 0 50px;
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    width: 1440px;
-    height: 90px;
-    z-index: 2;
+    padding: 25px 0 24px 0;
+    z-index: 50;
     background: rgba(242, 120, 92, 0.7);
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
-.wrapper_header {
+.header__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 1200px;
+    
 }
 
 .header__logo {
-    margin-bottom: 3px;
+    margin: 0 0px 6px 0;
 }
 
-.header__navigation{
-margin-left: -7%; /**подогнал попиксельно**/
+.header__logo-link{
+    display: flex;
 }
+
+.background-header-intro {
+    background: url(./images/background/garrett-parker-DlkF4-dbCOU-unsplash\ 1.png) no-repeat center;
+    max-width: 1440px;
+    background-size: cover;
+
+}
+
 
 .header__list {
     display: flex;
-    gap: 42px;
     flex-wrap: wrap;
     list-style-type: none;
+    padding-inline-start: 0px;
+    margin: 0;
+    line-height: 21px;
+    margin-left: 158px;
+}
+
+.header__item:not(:last-child) {
+    margin-right: 41px;
 }
 
 .header__link{
-    font-family: 'Red Hat Text';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
+    line-height: 10px;
     color: #FFFFFF;
     text-decoration: none;
 }
 
-.header__link:hover, .header__link:focus, .header__link:active {
+._mobile {
+    display: none;
+} 
+
+.header__link:hover, 
+.header__link:focus, 
+.header__link:active {
     color: #093d46;
 }
 
-.login__button:hover, .login__button:focus, .login__button:active {
-    background: #093d46;
+
+/* бургер меню для мобильной версии СТАРТ*/
+
+
+.header-burger{
+    display: none;
+    width: 26px;
+    height: 16px;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 9px;
 }
 
-.login__button {
-    width: 103px;
-    height: 41px;
+.burger-line{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #FFFFFF;
+    position: absolute;
+    right: 0;
+}
+
+.burger-line_first {
+    top: 0;
+}
+
+.burger-line_second {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger-line_third {
+    bottom: 0;
+    
+}
+
+.closer-burger{
+    display: none;
+}
+/* бургер меню для мобильной версии END*/
+
+.login-button {
+    display: flex;
+    padding: 0;
+    border: none;
     border-radius: 10px;
-    font-family: 'Red Hat Text';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
+    margin-left: auto;
+}
+
+.button, a.button {
+    min-height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #0D606F;
     color: #FFFFFF;
-    background: #0D606F;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border: transparent;
+    transition: opacity 0.2s ease;
+
 }
+.button:hover, a.button:hover  {
+    opacity: 0.8;
+    background: #093d46;
+    color: #FFFFFF;
+}
+
+
+@media (max-width: 1023px) {
+    .header__logo {
+        margin: 0 0 6px 0;
+    }
+
+    .header__navigation {
+        padding: 0 20px;
+    }
+    .header__item {
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__navigation {
+        padding: 0 30px;
+    }
+    .header__link{
+        font-size: 20px;
+        line-height: 10px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    ._container {
+        padding: 0 20px;
+    }
+    .header__item {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
 
 
 
@@ -101,108 +244,137 @@ margin-left: -7%; /**подогнал попиксельно**/
 
 .intro {
     color: #FFFFFF;
-    padding-top: 122px;
+    max-width: 1440px;
 }
 
-.wrapper__intro{
-    margin: 0 auto;
-    width: 1200px;
+.wrapper-intro{
+    margin: 0;
+    max-width: 1200px;
+}
+
+.wrapper-content-intro {
+    max-width: 892px;
+    min-height: 422px;
+    padding: 32px 0 221px 0;
 }
 
 .intro__title{
-    max-width: 892px;
-    margin-block-start: 0;
-    margin-block-end: 0;
     font-family: 'Aleo', serif;
     font-style: normal;
     font-weight: 700;
+    margin-block-start: 0;
+    margin-block-end: 0;
     font-size: 80px;
     margin-bottom: 30px;
+    line-height: 96px;
 }
 
 .intro__subtitle{
     font-family: 'Aleo', serif;
-    font-style: italic;
     font-weight: 700;
+    font-style: italic;
     font-size: 20px;
     margin-bottom: 46px;
+    line-height: 24px;
 }
 
-.start-planning__button {
-    position: relative;
-    left: 646px;
-    margin: 18px 0;
-    padding: 13px 32px;
-    font-family: 'Red Hat Text', sans-serif;
-    font-style: normal;
+
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.7);
+    max-width: 855px;
+    max-height: 59px;
+    border-radius: 16px;
+    margin: 0;
+    padding: 18px;
+}
+
+.search-txt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background: none;
+    padding: 0 0 0 23px;
+    font-family: 'Aleo', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+::placeholder {
+    color: #F2785C;
+}
+
+.start-planning-button {
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    margin-left: auto;
+}
+
+.button-big, a.button-big{
+    min-height: 59px;
     font-weight: 500;
     font-size: 24px;
-    color: #FFFFFF;
-    background: #0D606F;
-    border: transparent;
-    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
-    border-radius: 10px;
+    line-height: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
-.start-planning__button:hover, .start-planning__button:focus, start-planning__button:active{
-    background: #093d46;
+
+
+.small-arrow {
+    display: none;
 }
 
-.search-form__wrap{
-    margin: 0;
-    padding: 0;
+
+
+.search-box:hover {
+    background: rgba(255, 255, 255, 0.8);
 }
 
-.search-form__field{
-    width: 892px;
-    height: 95px;
-    padding:0;
-    border-radius: 16px;
-    border: none;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.7);
-    padding-left: 41px;
+.search-box::placeholder{
     font-family: 'Aleo', serif;
     font-style: italic;
     font-weight: 400;
     font-size: 24px;
     color: #F2785C;
+    
 }
 
-.search-form__field::placeholder{
-    font-family: 'Aleo', serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 24px;
-    color: #F2785C;
-}
 
-.search-form__field:focus, .search-form__field:active {
-    outline:none;
-    background: rgba(255, 255, 255, 0.815);
-}
+
+
 
 
 /* intro styles end*/
 
 /* steps styles start*/
 
-.steps {
-    width: 1177px;
+.steps__wrapper{
     background-color: #FFFFFF;
-    margin: 0 auto;
-    margin-top: 5.5%;
-    margin-bottom: 6.7%;
+    margin: 80px 131px 97px 131px;
 }
 
+@media (max-width: 1439px) {
+    .steps__wrapper{
+    margin: 80px 41px 97px 41px;
+    }
+}
+
+
+
 .steps__title {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
     font-weight: 500;
     font-size: 40px;
     color: #F2785C;
-    white-space: nowrap;
     text-align:center;
-    margin-bottom: 3.3%;
+    margin: 0 0 43px 0;
 }
 
 .steps__cards{
@@ -211,19 +383,30 @@ margin-left: -7%; /**подогнал попиксельно**/
     text-align:center;
 }
 
+@media (max-width: 1023px) {
+    .steps__cards{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
 .steps__card1{
-    width: 21%;
     margin-right: 4.9%;
 }
-.steps__card2 {
-    width: 18.5%;
-}
-.steps__card3{
-    width: 26.4%;
+
+@media (max-width: 1023px) {
+    .steps__card1{
+        margin-right: 0;
+    }
 }
 
+.steps__card2-3 {
+    
+}
 
-.text__steps{
+.text__steps1,
+.text__steps2,
+.text__steps3{
     margin: 0;
     font-weight: 400;
     font-size: 20px;
@@ -234,14 +417,25 @@ margin-left: -7%; /**подогнал попиксельно**/
     margin-top: 30px;
 }
 
+@media (max-width: 1023px) {
+    .text__steps1,
+    .text__steps2,
+    .text__steps3{
+        font-size: 25px;
+        margin-top: 20px;
+    }
+}
+
 
 /* steps styles end*/
 
 /* destinations styles start*/
 
 .destinations__wrapper-full {
+    display: flex;
+    justify-content: center;
     max-width: 2520px;
-    margin: 0 auto 80px;
+    margin: 0 0 85px 0;
 }
 
 
@@ -261,6 +455,17 @@ margin-left: -7%; /**подогнал попиксельно**/
     border-radius: 16px;
 }
 
+@media (max-width: 1023px) {
+    .slide {
+        width: 600px;
+        height: 600px;
+        border-radius: 16px;
+    }
+}
+
+.slide-mobile {
+    display: none;
+}
 
 .countries__names {
     position: absolute;
@@ -272,6 +477,14 @@ margin-left: -7%; /**подогнал попиксельно**/
     font-size: 32px;
     line-height: 42px;
     color: #FFFFFF;
+}
+
+.arrow2 {
+    display: none;
+}
+
+.arrow1 {
+    display: none;
 }
 
 .dots-wrapper{
@@ -294,19 +507,12 @@ margin-left: -7%; /**подогнал попиксельно**/
     outline:none;
 }
 
-.see-more__button {
-    display: block;
-    width: 228px;
+.find-more-button {
+    display: flex;
     margin: 0 auto;
-    padding: 13.5px 32px;
-    background: #0D606F;
-    border: transparent;
-    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border: none;
+    padding: 0;
     border-radius: 10px;
-}
-
-.see-more__button:hover, .see-more__button:focus, see-more__button:active{
-    background: #093d46;
 }
 
 
@@ -315,146 +521,143 @@ margin-left: -7%; /**подогнал попиксельно**/
 /* Travel Stories styles start*/
 
 
-.travel_stories {
-    margin: 0 auto;
+.travel-stories-highlight {
+    margin: 0 0 42px 0;
 }
 
-.wrapper__stories{
-    width: 83.3%;
-    margin: 0 auto ;
-}
-
-.steps__title-travel {
+.travel-stories-highlight h2 {
     text-align:center;
     font-weight: 500;
     font-size: 40px;
     color: #F2785C;
-    margin-bottom: 40PX;
+    margin: 0;
 }
 
 
-.stories__container-1 {
+.stories-container-first {
     display: flex;
     margin-bottom: 30px;
     padding-top: 40px;
 }
 
-.stories__container{
+.stories-container{
     display: flex;
     margin-bottom: 30px;
     margin-top: 0;
 }
 
-.stories__container-last{
+.stories-container-last{
     display: flex;
     margin-bottom: 40px;
     margin-top: 0;
 }
 
+.country-stories {
+    display: flex;
+    flex-direction: column;
+}
+
 .country__stories-img {
-    width: 400px;
-    height: 250px;
+    max-width: 400px;
+    max-height: 250px;
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
     margin-right: 40px;
-
 }
 
+@media (max-width: 1023px) {
+    .country__stories-img {
+        margin-right: 20px;
+    }
+}
+
+.travel-stories-content {
+    font-family: 'Aleo', serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #0D606F;
+}
 
 .stories-title {
-    font-family: 'Aleo', serif;
-    font-style: normal;
-    font-weight: 400;
     font-size: 35px;
     line-height: 42px;
-    color: #0D606F;
-    margin-top: 0;
+    margin: 0;
     margin-bottom: 24px;
-
+    display: flex;
 }
 
-.text__country__stories {
-    font-family: 'Aleo', serif;
-    font-style: normal;
-    font-weight: 400;
+@media (max-width: 1023px) {
+    .stories-title {
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 15px;
+    }
+}
+
+.text-country-stories {
     font-size: 20px;
     line-height: 24px;
-    color: #0D606F;
     margin: 0;
 }
 
-.stories__read-more {
-    font-family: 'Aleo', serif;
-    font-style: normal;
+.stories-read-more {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
+    text-decoration-line: underline;
 }
 
-
-
-
-
-.see-more {
-    display: inline-block;
-    padding-left: 48px;
-    font-family: 'Red Hat Text', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    color: #FFFFFF;
-    text-decoration: none;
-    background: url(./images/arrow.svg) no-repeat left center;
-    background-size: 35px 22px;
-    margin: 0;
+.see-more-button {
+    display: flex;
+    margin: 0 auto;
+    border: none;
+    padding: 0;
+    border-radius: 10px;    
 }
 
 /* Travel Stories styles end*/
 
 /* Footer styles start*/
 
+
 .footer {
-    width: 100%;
+    padding: 13.35px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-information {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 61px;
-    width: 144rem;
-    margin-top: 0;
-}
-
-.footer__items {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 39.25%;
-}
-
-.footer__information {
-    font-family: 'Red Hat Text', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
+    justify-content: center;
     color: #FFFFFF;
+}
+
+.media-container {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .media {
     display: flex;
-    justify-content: space-between;
-    width: 141px;
-    align-items: center;
+    gap: 20px;
 }
 
 .travel-stories-footer__background {
-    background: url(./images/background/backgound__futter.png)center;
-    width: 1440px;
-    
+    background: url(./images/background/backgound__futter.png) no-repeat;
+    max-width: 1440px;
+    background-size: cover;
 }
 
 .travel-stories__background {
     background: rgba(255, 255, 255, 0.7);
-    padding-bottom: 41px;
+    padding: 0 0 41px 0;
 }
 
 /* Footer styles end*/
