@@ -84,12 +84,17 @@ p {
     margin: 0 0px 6px 0;
 }
 
+.header__logo-link{
+    display: flex;
+}
+
 .background-header-intro {
     background: url(./images/background/garrett-parker-DlkF4-dbCOU-unsplash\ 1.png) no-repeat center;
     max-width: 1440px;
     background-size: cover;
 
 }
+
 
 .header__list {
     display: flex;
@@ -99,7 +104,6 @@ p {
     margin: 0;
     line-height: 21px;
     margin-left: 158px;
-
 }
 
 .header__item:not(:last-child) {
@@ -112,11 +116,56 @@ p {
     text-decoration: none;
 }
 
+._mobile {
+    display: none;
+} 
+
 .header__link:hover, 
 .header__link:focus, 
 .header__link:active {
     color: #093d46;
 }
+
+
+/* бургер меню для мобильной версии СТАРТ*/
+
+
+.header-burger{
+    display: none;
+    width: 26px;
+    height: 16px;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 9px;
+}
+
+.burger-line{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #FFFFFF;
+    position: absolute;
+    right: 0;
+}
+
+.burger-line_first {
+    top: 0;
+}
+
+.burger-line_second {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger-line_third {
+    bottom: 0;
+    
+}
+
+.closer-burger{
+    display: none;
+}
+/* бургер меню для мобильной версии END*/
 
 .login-button {
     display: flex;
@@ -184,6 +233,10 @@ p {
     }
 }
 
+
+
+
+
 /* header styles end*/
 
 /* intro styles start*/
@@ -195,7 +248,7 @@ p {
 }
 
 .wrapper-intro{
-    margin: 0 auto;
+    margin: 0;
     max-width: 1200px;
 }
 
@@ -273,6 +326,11 @@ p {
 
 
 
+.small-arrow {
+    display: none;
+}
+
+
 
 .search-box:hover {
     background: rgba(255, 255, 255, 0.8);
@@ -284,19 +342,12 @@ p {
     font-weight: 400;
     font-size: 24px;
     color: #F2785C;
+    
 }
 
-@media (max-width: 1023px) {
-    .search-box {
-    width: 94%;
-    }
-}
 
-@media (max-width: 767px) {
-    .search-box {
-        width: 94%;
-    }
-}
+
+
 
 
 /* intro styles end*/
@@ -353,7 +404,9 @@ p {
     
 }
 
-.text__steps{
+.text__steps1,
+.text__steps2,
+.text__steps3{
     margin: 0;
     font-weight: 400;
     font-size: 20px;
@@ -365,7 +418,9 @@ p {
 }
 
 @media (max-width: 1023px) {
-    .text__steps{
+    .text__steps1,
+    .text__steps2,
+    .text__steps3{
         font-size: 25px;
         margin-top: 20px;
     }
@@ -408,6 +463,10 @@ p {
     }
 }
 
+.slide-mobile {
+    display: none;
+}
+
 .countries__names {
     position: absolute;
     transform: translateY(-85px);
@@ -418,6 +477,14 @@ p {
     font-size: 32px;
     line-height: 42px;
     color: #FFFFFF;
+}
+
+.arrow2 {
+    display: none;
+}
+
+.arrow1 {
+    display: none;
 }
 
 .dots-wrapper{
